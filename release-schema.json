@@ -49,13 +49,15 @@
       }
     },
     "Implementation": {
-      "agreedMetrics": {
-          "type":"array",
-          "title":"Metrics",
-          "description":"Reported results from the delivery of the contracted goods, works or services.",
-          "items": {
-            "$ref": "#/definitions/Metric"
-          }
+        "properties":{
+              "metrics": {
+                  "type":"array",
+                  "title":"Metrics",
+                  "description":"Reported results from the delivery of the contracted goods, works or services.",
+                  "items": {
+                    "$ref": "#/definitions/Metric"
+                  }
+                }
         }
     },
     "Metric": {
