@@ -3,7 +3,7 @@
     "Planning": {
       "properties": {
         "forecasts": {
-          "type":["array","null"],
+          "type":"array",
           "title":"Forecasts",
           "description":"Any forecasts metrics for this results of this contracting process.",
           "items": {
