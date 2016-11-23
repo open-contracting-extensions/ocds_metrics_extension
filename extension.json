@@ -1,0 +1,6 @@
+{
+  "name": "Metrics",
+  "description": "The metrics extension supports publication of forecasts (planning stage), targets (tender stage), agreed performance targets (award and contract stage) and results (implementation stage).",
+  "compatibility": ">=1.0.0",
+  "dependencies": []
+}
