@@ -109,7 +109,7 @@
             "quantity": {
                 "title":"Quantity",
                 "description":"The quantity of this target or observation.",
-                "type":["string","float","integer","null"]
+                "type":["string","number","integer","null"]
             },
             "unit":{
                 "type":["object","null"],
