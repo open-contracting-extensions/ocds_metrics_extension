@@ -158,8 +158,7 @@
         "id": {
           "title": "Milestone ID",
           "description": "The ID of the milestone being referenced, this must match the ID of a milestone described elsewhere in a release about this contracting process.",
-          "type": "string",
-          "mergeStrategy": "ocdsVersion"
+          "type": "string"
         },
         "title": {
           "title": "Milestone title",
@@ -167,8 +166,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "mergeStrategy": "ocdsVersion"
+          ]
         }
       }
     }
