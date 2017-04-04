@@ -93,7 +93,7 @@
     "Observation":{
         "type":"object",
         "title":"Observation",
-        "description":"An actual or target observation. Observations should include either a value (for financial metrics) or quantity (for other metrics). ",
+        "description":"An actual or target observation. Observations should include either a value (for financial metrics) or a measure (for other metrics). ",
         "properties":{
             "id": {
                 "title":"Observation identifier",
@@ -110,9 +110,9 @@
 				"description": "For financial metrics, the value of this forecast, target or actual observation.",
 				"$ref": "#/definitions/Value"
             },
-            "quantity": {
-                "title":"Observation quantity",
-                "description":"For non-financial metrics, the quantity of this forecast, target or actual observation.",
+            "measure": {
+                "title":"Observation measure",
+                "description":"For non-financial metrics, the measure of this forecast, target or actual observation. Measures may be provided as free text or numerical values.",
                 "type":["string","number","null"]
             },
             "unit":{
@@ -123,7 +123,7 @@
                     "name": {
                         "type":["string","null"],
                         "title":"Unit name",
-                        "description":"The name of the unit quantity is provided in"       
+                        "description":"The name of the unit."       
                     },
                     "id": {
                         "title":"See https://github.com/open-contracting/standard/issues/366 for information on the proposed unit extension to capture structured unit information"
