@@ -3,9 +3,9 @@
     "Planning": {
       "properties": {
         "forecasts": {
-          "type":"array",
-          "title":"Forecasts",
-          "description":"Any forecasts metrics for this results of this contracting process.",
+          "type": "array",
+          "title": "Forecasts",
+          "description": "Any forecasts metrics for this results of this contracting process.",
           "items": {
             "$ref": "#/definitions/Metric"
           }
@@ -15,9 +15,9 @@
     "Tender": {
       "properties": {
         "targets": {
-          "type":"array",
-          "title":"Targets",
-          "description":"Any target metrics for this results of this contracting process.",
+          "type": "array",
+          "title": "Targets",
+          "description": "Any target metrics for this results of this contracting process.",
           "items": {
             "$ref": "#/definitions/Metric"
           }
@@ -27,9 +27,9 @@
     "Award": {
       "properties": {
         "agreedMetrics": {
-          "type":"array",
-          "title":"Agreed metrics",
-          "description":"Any target metrics set out as part of the contract award.",
+          "type": "array",
+          "title": "Agreed metrics",
+          "description": "Any target metrics set out as part of the contract award.",
           "items": {
             "$ref": "#/definitions/Metric"
           }
@@ -38,10 +38,10 @@
     },
     "Contract": {
       "properties": {
-         "agreedMetrics": {
-          "type":"array",
-          "title":"Agreed metrics",
-          "description":"Any target metrics set out as part of the contract documents.",
+        "agreedMetrics": {
+          "type": "array",
+          "title": "Agreed metrics",
+          "description": "Any target metrics set out as part of the contract documents.",
           "items": {
             "$ref": "#/definitions/Metric"
           }
@@ -49,16 +49,16 @@
       }
     },
     "Implementation": {
-        "properties":{
-              "metrics": {
-                  "type":"array",
-                  "title":"Metrics",
-                  "description":"Reported results from the delivery of the contracted goods, works or services.",
-                  "items": {
-                    "$ref": "#/definitions/Metric"
-                  }
-                }
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "title": "Metrics",
+          "description": "Reported results from the delivery of the contracted goods, works or services.",
+          "items": {
+            "$ref": "#/definitions/Metric"
+          }
         }
+      }
     },
     "Metric": {
       "type": "object",
@@ -68,75 +68,126 @@
         "id": {
           "title": "Identifier",
           "description": "An identifier for this metric. In some cases this may be drawn from a codelist of metrics required for this type of contracting process, or in other instances may be an arbitrary identifier.",
-          "type":["string"]
+          "type": [
+            "string"
+          ]
         },
         "title": {
-            "title":"Title",
-            "description":"The title of this metric",
-            "type":["string","null"]
+          "title": "Title",
+          "description": "The title of this metric",
+          "type": [
+            "string",
+            "null"
+          ]
         },
-        "description":{
-            "title":"Description",
-            "description":"A short description of the metric. This may include short details of measurement methods.",
-            "type":["string","null"]
+        "description": {
+          "title": "Description",
+          "description": "A short description of the metric. This may include short details of measurement methods.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
-        "observations":{
-            "type":"array",
-            "title":"Observations",
-            "description":"An array of target or actual values for this metric.",
-            "items": {
-                "$ref": "#/definitions/Observation"
-            }
+        "observations": {
+          "type": "array",
+          "title": "Observations",
+          "description": "An array of target or actual values for this metric.",
+          "items": {
+            "$ref": "#/definitions/Observation"
+          }
         }
       }
     },
-    "Observation":{
-        "type":"object",
-        "title":"Observation",
-        "description":"An actual or target observation. Observations should include either a value (for financial metrics) or quantity (for other metrics). ",
-        "properties":{
+    "Observation": {
+      "type": "object",
+      "title": "Observation",
+      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or quantity (for other metrics). ",
+      "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "A local identifier for this specific observation. This may be an arbitrary identifier, or could be a composite of the metric identifier, and the date and other dimensions of this observation.",
+          "type": "string"
+        },
+        "period": {
+          "$ref": "#/definitions/Period"
+        },
+        "value": {
+          "$ref": "#/definitions/Value"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "description": "The quantity of this target or observation.",
+          "type": [
+            "string",
+            "float",
+            "integer",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "title": "Unit",
+          "description": "Unit",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Unit name",
+              "description": "The name of the unit quantity is provided in"
+            },
+            "scheme": {
+              "title": "Scheme",
+              "description": "The list from which units of measure identifiers are taken. This should be an entry in the unitClassificationScheme codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended.   ",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "unitClassificationScheme.csv",
+              "openCodelist": true
+            },
             "id": {
-                "title":"Identifier",
-                "description":"A local identifier for this specific observation. This may be an arbitrary identifier, or could be a composite of the metric identifier, and the date and other dimensions of this observation.",
-                "type":"string"
+              "title": "ID",
+              "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure. ",
+              "type": [
+                "string",
+                "null"
+              ]
             },
-            "period":{
-                "$ref": "#/definitions/Period"
-            },
-            "value": {
-                "$ref": "#/definitions/Value"
-            },
-            "quantity": {
-                "title":"Quantity",
-                "description":"The quantity of this target or observation.",
-                "type":["string","float","integer","null"]
-            },
-            "unit":{
-                "type":["object","null"],
-                "title":"Unit",
-                "description":"Unit",
-                "properties": {
-                    "name": {
-                        "type":["string","null"],
-                        "title":"Unit name",
-                        "description":"The name of the unit quantity is provided in"       
-                    },
-                    "id": {
-                        "title":"See https://github.com/open-contracting/standard/issues/366 for information on the proposed unit extension to capture structured unit information"
-                    }
-                }
-            },
-            "dimensions":{
-                "type":"object",
-                "title":"Dimensions",
-                "description":"Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS."
-            },
-            "notes": {
-                "title":"Notes",
-                "description":"Any notes on this observation. This may include clarifying information.",
-                "type":["string","null"]
+            "uri": {
+              "title": "URI",
+              "description": "If the scheme used provide a machine-readable URI for this unit of measure, this can be given.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri"
             }
+          }
+        },
+        "dimensions": {
+          "type": "object",
+          "title": "Dimensions",
+          "description": "Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS.",
+          "patternProperties": {
+            "^.*": {
+              "type": "string"
+            }
+          }
+        },
+        "notes": {
+          "title": "Notes",
+          "description": "Any notes on this observation. This may include clarifying information.",
+          "type": [
+            "string",
+            "null"
+          ]
         }
+      }
     }
   }
 }
