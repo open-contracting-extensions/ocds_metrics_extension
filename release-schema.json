@@ -101,7 +101,7 @@
     "Observation": {
       "type": "object",
       "title": "Observation",
-      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or quantity (for other metrics). ",
+      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics). ",
       "properties": {
         "id": {
           "title": "Identifier",
@@ -114,13 +114,12 @@
         "value": {
           "$ref": "#/definitions/Value"
         },
-        "quantity": {
-          "title": "Quantity",
-          "description": "The quantity of this target or observation.",
+        "measure": {
+          "title": "Observation measure",
+          "description": "For non-financial metrics, the measure of this forecast, target or actual observation. Measures may be provided as free text or numerical values.",
           "type": [
             "string",
-            "float",
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -138,7 +137,7 @@
                 "null"
               ],
               "title": "Unit name",
-              "description": "The name of the unit quantity is provided in"
+              "description": "The name of the unit."
             },
             "scheme": {
               "title": "Scheme",
