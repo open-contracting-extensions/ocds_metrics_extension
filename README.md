@@ -5,12 +5,20 @@ The metrics extension provides a common building block for reporting structured 
 
 Metrics are structured like an [OLAP data cube](https://en.wikipedia.org/wiki/OLAP_cube) with each instance of ```Metric``` representing a single **observation**, categorised by a number of **dimensions**.
 
+The metrics extension can be used at:
+
+* The ```planning``` stage for forecasts for the contracting process (e.g. forecast demand levels)
+* The ```tender``` stage for targets for the contracting process (e.g. target availability levels or KPIs)
+* The ```award``` and ```contract``` stages for targets agreed with the successful supplier (e.g. availability levels or KPIs)
+* The ```implementation``` stage for actual performance information (e.g. actual demand, availability, KPIs etc.)
+
 Where the metrics extension is used to model targets for a contracting process, the ```description``` field can be used to start whether the target is a minimum or recommended target.
 
+## Example - Forecasts
 
 ```json
 {
-  "metrics":[
+  "forecasts":[
     {
       "id":"annualDemand",
       "title":"Annual Demand",
@@ -45,7 +53,56 @@ Where the metrics extension is used to model targets for a contracting process, 
   ]
 }
 ```
+## Example - Physical progress
 
+The metrics extension can also be used to report on the physical progress of a contract. The following JSON snippet shows how the metrics extension could be used to report on progress for the construction of a highway, both by percent completion and number of kilometres constructed:
+
+```json
+                    "implementation": {
+                        "metrics": [
+                            {
+                                "id": "completionPercent",
+                                "title": "Construction progress (percent)",
+                                "description": "Percent completion of the construction of example highway",
+                                "observations": [
+                                    {
+                                        "id": "completionPercent-2016-Q1",
+                                        "period": {
+                                            "startDate": "2016-03-31T23:59:59Z",
+                                            "endDate": "2016-03-31T23:59:59Z"
+                                        },
+                                        "measure": "25",
+                                        "unit": {
+                                            "name": "percent",
+                                            "id": "P1",
+                                            "scheme": "UNCEFACT"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "completionKilometres",
+                                "title": "Construction progress (kilometres)",
+                                "description": "Progress of construction of example highway measured in kilometres",
+                                "observations": [
+                                    {
+                                        "id": "completionKilometres-2016-Q1",
+                                        "period": {
+                                            "startDate": "2016-03-31T23:59:59Z",
+                                            "endDate": "2016-03-31T23:59:59Z"
+                                        },
+                                        "measure": "15",
+                                        "unit": {
+                                            "name": "kilometre",
+                                            "id": "KMT",
+                                            "scheme": "UNCEFACT"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+```
 
 ## Use with requirements
 
