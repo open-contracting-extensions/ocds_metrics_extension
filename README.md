@@ -2,16 +2,16 @@
 
 The metrics extension provides a common building block for reporting structured performance information on contracts.
 
-Metrics are structured like an [OLAP data cube](https://en.wikipedia.org/wiki/OLAP_cube) with each instance of ```Metric``` representing a single **observation**, categorized by a number of **dimensions**.
+Metrics are structured like an [OLAP data cube](https://en.wikipedia.org/wiki/OLAP_cube) with each instance of `Metric` representing a single **observation**, categorized by a number of **dimensions**.
 
 The metrics extension can be used at:
 
-* The ```planning``` stage for forecasts for the contracting process (e.g. forecast demand levels)
-* The ```tender``` stage for targets for the contracting process (e.g. target availability levels or KPIs)
-* The ```award``` and ```contract``` stages for targets agreed with the successful supplier (e.g. availability levels or KPIs)
-* The ```implementation``` stage for actual performance information (e.g. actual demand, availability, KPIs etc.)
+* The `planning` stage for forecasts for the contracting process (e.g. forecast demand levels)
+* The `tender` stage for targets for the contracting process (e.g. target availability levels or KPIs)
+* The `award` and `contract` stages for targets agreed with the successful supplier (e.g. availability levels or KPIs)
+* The `implementation` stage for actual performance information (e.g. actual demand, availability, KPIs etc.)
 
-Where the metrics extension is used to model targets for a contracting process, the ```description``` field can be used to start whether the target is a minimum or recommended target.
+Where the metrics extension is used to model targets for a contracting process, the `description` field can be used to start whether the target is a minimum or recommended target.
 
 ## Example - Forecasts
 
@@ -108,7 +108,7 @@ The metrics extension can also be used to report on the physical progress of a c
 
 Metrics can be used along with the **requirements extension** which will add a 'relatedRequirementID' property to metrics.
 
-With the requirements extension, bids, awards and contracts can include a ```RequirementResponse``` indicating the values against each metric that a supplier intends to meet.
+With the requirements extension, bids, awards and contracts can include a `RequirementResponse` indicating the values against each metric that a supplier intends to meet.
 
 This can allow a degree of comparison between performance anticipated at bid, award, contract and implementation phases.
 
