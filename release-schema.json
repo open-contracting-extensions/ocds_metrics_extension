@@ -109,9 +109,13 @@
           "type": "string"
         },
         "period": {
+          "title": "Observation period",
+          "description": "The period over which this observation is measured",
           "$ref": "#/definitions/Period"
         },
         "value": {
+          "title": "Observation value",
+          "description": "For financial metrics, the value of this forecast, target or actual observation.",
           "$ref": "#/definitions/Value"
         },
         "measure": {
