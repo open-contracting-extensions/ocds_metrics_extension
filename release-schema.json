@@ -109,13 +109,17 @@
           "type": "string"
         },
         "period": {
+          "title": "Period",
+          "description": "The period over which this observation is measured.",
           "$ref": "#/definitions/Period"
         },
         "value": {
+          "title": "Value",
+          "description": "For financial metrics, the value of this forecast, target or actual observation.",
           "$ref": "#/definitions/Value"
         },
         "measure": {
-          "title": "Observation measure",
+          "title": "Measure",
           "description": "For non-financial metrics, the measure of this forecast, target or actual observation. Measures may be provided as free text or numerical values.",
           "type": [
             "string",
