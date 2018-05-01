@@ -110,7 +110,7 @@
         },
         "period": {
           "title": "Period",
-          "description": "The period over which this observation is measured",
+          "description": "The period over which this observation is measured.",
           "$ref": "#/definitions/Period"
         },
         "value": {
