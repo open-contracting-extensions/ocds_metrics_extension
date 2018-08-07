@@ -10,5 +10,8 @@
   },
   "compatibility": [
     "1.1"
+  ],
+  "schemas": [
+    "release-schema.json"
   ]
 }
