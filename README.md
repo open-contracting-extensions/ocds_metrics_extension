@@ -111,12 +111,6 @@ With the requirements extension, bids, awards and contracts can include a `Requi
 
 This can allow a degree of comparison between performance anticipated at bid, award, contract and implementation phases.
 
-## To Do
-
-* [ ] Check oneOf schema syntax for value **or** quantity
-* [ ] Add relatedRequirementID to requirements extension
-* [ ] Validate schema updates
-
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
