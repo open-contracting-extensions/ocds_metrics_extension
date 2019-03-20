@@ -73,7 +73,8 @@
           "description": "An identifier for this metric. In some cases this may be drawn from a codelist of metrics required for this type of contracting process, or in other instances may be an arbitrary identifier.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "title": {
           "title": "Title",
@@ -112,7 +113,8 @@
         "id": {
           "title": "Identifier",
           "description": "A local identifier for this specific observation. This may be an arbitrary identifier, or could be a composite of the metric identifier, and the date and other dimensions of this observation.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "period": {
           "title": "Period",
@@ -220,7 +222,8 @@
         "id": {
           "title": "Milestone ID",
           "description": "The ID of the milestone being referenced, this must match the ID of a milestone described elsewhere in a release about this contracting process.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "title": {
           "title": "Milestone title",
