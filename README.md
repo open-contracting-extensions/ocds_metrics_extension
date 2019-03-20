@@ -118,3 +118,20 @@ This can allow a degree of comparison between performance anticipated at bid, aw
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+## Changelog
+
+### 2019-03-20
+
+* Set `"uniqueItems": true` on array fields, and add `"minLength": 1` on required string fields.
+* Make `Observation.unit` non-nullable, like `Item.unit`.
+* Make `Observation.dimensions` non-nullable (undo earlier change).
+
+### 2018-05-08
+
+* Make `Metric.id` and `Observation.id` required to support revision tracking and [list merging](http://standard.open-contracting.org/latest/en/schema/merging/#lists)
+
+### 2018-05-01
+
+* Add title and description to `Observation.period` and `Observation.value`.
+* Make `Observation.dimensions` nullable.

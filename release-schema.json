@@ -142,10 +142,7 @@
           ]
         },
         "unit": {
-          "type": [
-            "object",
-            "null"
-          ],
+          "type": "object",
           "title": "Unit",
           "description": "Unit",
           "properties": {
@@ -187,10 +184,7 @@
           }
         },
         "dimensions": {
-          "type": [
-            "object",
-            "null"
-          ],
+          "type": "object",
           "title": "Dimensions",
           "description": "Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS.",
           "patternProperties": {
