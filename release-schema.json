@@ -8,7 +8,8 @@
           "description": "Any forecasts metrics for this results of this contracting process.",
           "items": {
             "$ref": "#/definitions/Metric"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -20,7 +21,8 @@
           "description": "Any target metrics for this results of this contracting process.",
           "items": {
             "$ref": "#/definitions/Metric"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -32,7 +34,8 @@
           "description": "Any target metrics set out as part of the contract award.",
           "items": {
             "$ref": "#/definitions/Metric"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -44,7 +47,8 @@
           "description": "Any target metrics set out as part of the contract documents.",
           "items": {
             "$ref": "#/definitions/Metric"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -56,7 +60,8 @@
           "description": "Reported results from the delivery of the contracted goods, works or services.",
           "items": {
             "$ref": "#/definitions/Metric"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -98,7 +103,8 @@
           "description": "An array of target or actual values for this metric.",
           "items": {
             "$ref": "#/definitions/Observation"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
