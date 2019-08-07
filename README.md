@@ -19,36 +19,38 @@ Where the metrics extension is used to model targets for a contracting process, 
 
 ```json
 {
-  "forecasts":[
-    {
-      "id":"annualDemand",
-      "title":"Annual Demand",
-      "description":"The annual demand",
-      "observations":[
-        {
-          "period":{
-            "startDate":"2015-01-01T00:00:00Z",
-            "endDate":"2015-12-31T23:59:59Z"
+  "planning": {
+    "forecasts": [
+      {
+        "id": "annualDemand",
+        "title": "Annual Demand",
+        "description": "The annual demand",
+        "observations": [
+          {
+            "period": {
+              "startDate": "2015-01-01T00:00:00Z",
+              "endDate": "2015-12-31T23:59:59Z"
+            },
+            "quantity": "10000",
+            "dimensions": {
+              "vehicleType": "Car"
+            }
           },
-          "quantity":"10000",
-          "dimensions":{
-            "vehicleType":"Car"
+          {
+            "period": {
+              "startDate": "2015-01-01T00:00:00Z",
+              "endDate": "2015-12-31T23:59:59Z"
+            },
+            "quantity": "1000",
+            "dimensions": {
+              "vehicleType": "Trucks"
+            },
+            "note": "Simple note"
           }
-        },
-        {
-          "period":{
-            "startDate":"2015-01-01T00:00:00Z",
-            "endDate":"2015-12-31T23:59:59Z"
-          },
-          "quantity":"1000",
-          "dimensions":{
-            "vehicleType":"Trucks"
-          },
-          "note":"Simple note"
-        }
-      ]
-    }
-  ]
+        ]
+      }
+    ]
+  }
 }
 ```
 
@@ -60,50 +62,54 @@ The metrics extension can also be used to report on the physical progress of a c
 
 ```json
 {
-  "implementation": {
-    "metrics": [
-      {
-        "id": "completionPercent",
-        "title": "Construction progress (percent)",
-        "description": "Percent completion of the construction of example highway",
-        "observations": [
+  "contracts": [
+    {
+      "implementation": {
+        "metrics": [
           {
-            "id": "completionPercent-2016-Q1",
-            "period": {
-              "startDate": "2016-03-31T23:59:59Z",
-              "endDate": "2016-03-31T23:59:59Z"
-            },
-            "measure": "25",
-            "unit": {
-              "name": "percent",
-              "id": "P1",
-              "scheme": "UNCEFACT"
-            }
-          }
-        ]
-      },
-      {
-        "id": "completionKilometres",
-        "title": "Construction progress (kilometres)",
-        "description": "Progress of construction of example highway measured in kilometres",
-        "observations": [
+            "id": "completionPercent",
+            "title": "Construction progress (percent)",
+            "description": "Percent completion of the construction of example highway",
+            "observations": [
+              {
+                "id": "completionPercent-2016-Q1",
+                "period": {
+                  "startDate": "2016-03-31T23:59:59Z",
+                  "endDate": "2016-03-31T23:59:59Z"
+                },
+                "measure": "25",
+                "unit": {
+                  "name": "percent",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              }
+            ]
+          },
           {
-            "id": "completionKilometres-2016-Q1",
-            "period": {
-              "startDate": "2016-03-31T23:59:59Z",
-              "endDate": "2016-03-31T23:59:59Z"
-            },
-            "measure": "15",
-            "unit": {
-              "name": "kilometre",
-              "id": "KMT",
-              "scheme": "UNCEFACT"
-            }
+            "id": "completionKilometres",
+            "title": "Construction progress (kilometres)",
+            "description": "Progress of construction of example highway measured in kilometres",
+            "observations": [
+              {
+                "id": "completionKilometres-2016-Q1",
+                "period": {
+                  "startDate": "2016-03-31T23:59:59Z",
+                  "endDate": "2016-03-31T23:59:59Z"
+                },
+                "measure": "15",
+                "unit": {
+                  "name": "kilometre",
+                  "id": "KMT",
+                  "scheme": "UNCEFACT"
+                }
+              }
+            ]
           }
         ]
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 
