@@ -27,25 +27,27 @@ Where the metrics extension is used to model targets for a contracting process, 
         "description": "The annual demand",
         "observations": [
           {
+            "id": "1",
             "period": {
               "startDate": "2015-01-01T00:00:00Z",
               "endDate": "2015-12-31T23:59:59Z"
             },
-            "quantity": "10000",
+            "measure": 10000,
             "dimensions": {
               "vehicleType": "Car"
             }
           },
           {
+            "id": "2",
             "period": {
               "startDate": "2015-01-01T00:00:00Z",
               "endDate": "2015-12-31T23:59:59Z"
             },
-            "quantity": "1000",
+            "measure": 1000,
             "dimensions": {
               "vehicleType": "Trucks"
             },
-            "note": "Simple note"
+            "notes": "Simple note"
           }
         ]
       }
@@ -64,6 +66,8 @@ The metrics extension can also be used to report on the physical progress of a c
 {
   "contracts": [
     {
+      "id": "1",
+      "awardID": "1",
       "implementation": {
         "metrics": [
           {
