@@ -8,7 +8,7 @@ The metrics extension can be used at:
 
 * The `planning` stage for forecasts for the contracting process (e.g. forecast demand levels)
 * The `tender` stage for targets for the contracting process (e.g. target availability levels or KPIs)
-* The `award` and `contract` stages for targets agreed with the successful supplier (e.g. availability levels or KPIs)
+* The `awards` and `contracts` stages for targets agreed with the successful supplier (e.g. availability levels or KPIs)
 * The `implementation` stage for actual performance information (e.g. actual demand, availability, KPIs etc.)
 
 Where the metrics extension is used to model targets for a contracting process, the `description` field can be used to start whether the target is a minimum or recommended target.
