@@ -119,7 +119,7 @@ The metrics extension can also be used to report on the physical progress of a c
 
 ## Use with requirements
 
-Metrics can be used along with the **requirements extension** which will add a 'relatedRequirementID' property to metrics.
+Metrics can be used along with the **requirements extension** which will add a `relatedRequirementID` field to metrics.
 
 With the requirements extension, bids, awards and contracts can include a `RequirementResponse` indicating the values against each metric that a supplier intends to meet.
 
