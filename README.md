@@ -117,14 +117,6 @@ The metrics extension can also be used to report on the physical progress of a c
 }
 ```
 
-## Use with requirements
-
-Metrics can be used along with the [requirements extension](https://github.com/open-contracting-extensions/ocds_requirements_extension) which will add a `RequirementReference` to metrics.
-
-With the requirements extension, bids, awards and contracts can include a `RequirementResponse` indicating the values against each metric that a supplier intends to meet.
-
-This can allow a degree of comparison between performance anticipated at bid, award, contract and implementation phases.
-
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
