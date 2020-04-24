@@ -9,7 +9,8 @@
           "items": {
             "$ref": "#/definitions/Metric"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     },
@@ -22,7 +23,8 @@
           "items": {
             "$ref": "#/definitions/Metric"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     },
@@ -35,7 +37,8 @@
           "items": {
             "$ref": "#/definitions/Metric"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     },
@@ -48,7 +51,8 @@
           "items": {
             "$ref": "#/definitions/Metric"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     },
@@ -61,7 +65,8 @@
           "items": {
             "$ref": "#/definitions/Metric"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     },
@@ -87,7 +92,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Description",
@@ -95,7 +101,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "observations": {
           "type": "array",
@@ -104,9 +111,11 @@
           "items": {
             "$ref": "#/definitions/Observation"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Observation": {
       "type": "object",
@@ -139,7 +148,8 @@
             "string",
             "number",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "unit": {
           "type": "object",
@@ -152,7 +162,8 @@
                 "null"
               ],
               "title": "Unit name",
-              "description": "The name of the unit."
+              "description": "The name of the unit.",
+              "minLength": 1
             },
             "scheme": {
               "title": "Scheme",
@@ -162,7 +173,8 @@
                 "null"
               ],
               "codelist": "unitClassificationScheme.csv",
-              "openCodelist": true
+              "openCodelist": true,
+              "minLength": 1
             },
             "id": {
               "title": "ID",
@@ -170,7 +182,8 @@
               "type": [
                 "string",
                 "null"
-              ]
+              ],
+              "minLength": 1
             },
             "uri": {
               "title": "URI",
@@ -181,7 +194,8 @@
               ],
               "format": "uri"
             }
-          }
+          },
+          "minProperties": 1
         },
         "dimensions": {
           "type": "object",
@@ -192,9 +206,11 @@
               "type": [
                 "string",
                 "null"
-              ]
+              ],
+              "minLength": 1
             }
-          }
+          },
+          "minProperties": 1
         },
         "notes": {
           "title": "Notes",
@@ -202,14 +218,16 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "relatedImplementationMilestone": {
           "title": "Related implementation milestone",
           "description": "A link to the milestone in the implementation section of OCDS to which this forecast, target or actual observation relates.",
           "$ref": "#/definitions/MilestoneReference"
         }
-      }
+      },
+      "minProperties": 1
     },
     "MilestoneReference": {
       "type": "object",
@@ -231,9 +249,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     }
   }
 }
