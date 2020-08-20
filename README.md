@@ -56,8 +56,6 @@ Where the metrics extension is used to model targets for a contracting process, 
 }
 ```
 
-## Example
-
 ### Physical progress
 
 The metrics extension can also be used to report on the physical progress of a contract. The following JSON snippet shows how the metrics extension could be used to report on progress for the construction of a highway, both by percent completion and number of kilometres constructed:
