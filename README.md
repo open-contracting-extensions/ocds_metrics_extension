@@ -123,7 +123,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### Unreleased
 
-* Change `Observation.unit` to reference `Unit` definition in standard v1.2
+* Change `Observation.unit` to reference `Unit` definition in OCDS 1.2
 
 ### 2020-04-24
 
