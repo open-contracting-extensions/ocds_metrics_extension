@@ -81,9 +81,7 @@
         "id": {
           "title": "Identifier",
           "description": "An identifier for this metric. In some cases this may be drawn from a codelist of metrics required for this type of contracting process, or in other instances may be an arbitrary identifier.",
-          "type": [
-            "string"
-          ],
+          "type": "string",
           "minLength": 1
         },
         "title": {
