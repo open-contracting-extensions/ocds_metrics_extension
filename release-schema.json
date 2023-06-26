@@ -3,9 +3,9 @@
     "Planning": {
       "properties": {
         "forecasts": {
-          "type": "array",
           "title": "Forecasts",
           "description": "Any forecasts metrics for this results of this contracting process.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Metric"
           },
@@ -17,9 +17,9 @@
     "Tender": {
       "properties": {
         "targets": {
-          "type": "array",
           "title": "Targets",
           "description": "Any target metrics for this results of this contracting process.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Metric"
           },
@@ -31,9 +31,9 @@
     "Award": {
       "properties": {
         "agreedMetrics": {
-          "type": "array",
           "title": "Agreed metrics",
           "description": "Any target metrics set out as part of the contract award.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Metric"
           },
@@ -45,9 +45,9 @@
     "Contract": {
       "properties": {
         "agreedMetrics": {
-          "type": "array",
           "title": "Agreed metrics",
           "description": "Any target metrics set out as part of the contract documents.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Metric"
           },
@@ -59,9 +59,9 @@
     "Implementation": {
       "properties": {
         "metrics": {
-          "type": "array",
           "title": "Metrics",
           "description": "Reported results from the delivery of the contracted goods, works or services.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Metric"
           },
@@ -71,9 +71,9 @@
       }
     },
     "Metric": {
-      "type": "object",
       "title": "Metric",
       "description": "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -103,9 +103,9 @@
           "minLength": 1
         },
         "observations": {
-          "type": "array",
           "title": "Observations",
           "description": "An array of target or actual values for this metric.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Observation"
           },
@@ -116,9 +116,9 @@
       "minProperties": 1
     },
     "Observation": {
-      "type": "object",
       "title": "Observation",
       "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics). ",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -155,9 +155,9 @@
           "$ref": "#/definitions/Unit"
         },
         "dimensions": {
-          "type": "object",
           "title": "Dimensions",
           "description": "Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS.",
+          "type": "object",
           "patternProperties": {
             "^.*": {
               "type": [
@@ -187,9 +187,9 @@
       "minProperties": 1
     },
     "MilestoneReference": {
-      "type": "object",
       "title": "Milestone Reference",
       "description": "A block used to reference a milestone, including the ID and title of the milestone being referenced.",
+      "type": "object",
       "required": [
         "id"
       ],
