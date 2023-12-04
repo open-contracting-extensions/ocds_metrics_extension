@@ -9,7 +9,7 @@ The metrics extension can be used at:
 * The `planning` stage for forecasts for the contracting process (e.g. forecast demand levels)
 * The `tender` stage for targets for the contracting process (e.g. target availability levels or KPIs)
 * The `awards` and `contracts` stages for targets agreed with the successful supplier (e.g. availability levels or KPIs)
-* The `implementation` stage for actual performance information (e.g. actual demand, availability, KPIs etc.)
+* The `implementation` stage for actual performance information (e.g. actual demand, physical progress, availability or KPIs)
 
 Where the metrics extension is used to model targets for a contracting process, the `description` field can be used to indicate whether the target is a minimum or recommended target.
 
@@ -58,7 +58,7 @@ Where the metrics extension is used to model targets for a contracting process, 
 
 ### Physical progress
 
-The metrics extension can also be used to report on the physical progress of a contract. The following JSON snippet shows how the metrics extension could be used to report on progress for the construction of a highway, both by percent completion and number of kilometres constructed:
+The physical progress of a highway's construction, by percent completion and kilometres constructed:
 
 ```json
 {
