@@ -4,7 +4,7 @@
       "properties": {
         "forecasts": {
           "title": "Forecasts",
-          "description": "Any forecasts metrics for this results of this contracting process.",
+          "description": "Any forecasts metrics for a future contracting process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Metric"
@@ -18,7 +18,7 @@
       "properties": {
         "targets": {
           "title": "Targets",
-          "description": "Any target metrics for this results of this contracting process.",
+          "description": "Any target metrics for this contracting process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Metric"
